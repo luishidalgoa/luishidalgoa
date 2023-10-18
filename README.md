@@ -1,8 +1,20 @@
-<h2 align="left">Hi 👋! My name is Luis, I´m a Junior {Software Developer} ⚙️</h2>
-
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=jwenjian.visitor-badge&format=true)
+<br>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7F7F7&random=false&width=435&lines=Hi+%F0%9F%91%8B!+My+name+is+Luis;+I%C2%B4m+a+Junior+%7BSoftware+Developer%7D+%E2%9A%99%EF%B8%8F" alt="Typing SVG" /></a>
 ###
 
-<p align="left">Hello World!!</p>
+<p align="left">Soy un estudiando de Desarrollo de Software en I.E.S Francisco de los Ríos (Fernan-nuñez, Córdoba).
+Entre mis proyectos mas relevantes destaco:</p>
+<ul>
+  <li>Red Social (Nexa-project): En este proyecto desarrolle varias de las principales funcionalidades de una red social</li>
+  <li>Videojuego VR (VR-EXPERIENCE): Desarrollado en Unity. El objetivo fue brindar una experiencia VR al usuario <a href="https://pmd-vr-experience.web.app/index.html">Pagina web del proyecto</a></li>
+  <li>App web Gestion de tareas (Daily): Crea listas de tareas en las que organizar tus actividades pendientes <a href="https://withardoriginal1.github.io/Templates/index.html">Enlace a la aplicacion web</a></li>
+  <li>Portfolio Web: <a href="https://luishidalgoa.github.io/">Enlace aquí</a></li>
+</ul>
+
+<br>
+<br>
+<br>
 
 ###
 
