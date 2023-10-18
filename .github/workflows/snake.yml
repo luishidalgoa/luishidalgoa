@@ -9,12 +9,19 @@ on:
   push:
     branches:
     - master
+    
 
 jobs:
   generate:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug GitHub username
+        run: echo ${{ github.repository_owner }}
+
+
+
+    
       - name: generate snake.svg
         uses: Platane/snk/svg-only@v2
         with:
@@ -29,3 +36,5 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+        
