@@ -1,7 +1,7 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F7F7F7&random=false&width=435&lines=Hi+%F0%9F%91%8B!+My+name+is+Luis;+I%C2%B4m+a+Junior+%7BSoftware+Developer%7D+%E2%9A%99%EF%B8%8F" alt="Typing SVG" /></a>
 ###
-
+<h3>Sobre mí</h3>
 <p align="left">Soy un estudiando de Desarrollo de Software en I.E.S Francisco de los Ríos (Fernan-nuñez, Córdoba).
 Entre mis proyectos mas relevantes destaco:</p>
 <ul>
@@ -12,6 +12,14 @@ Entre mis proyectos mas relevantes destaco:</p>
 </ul>
 
 <br>
+<h3>Desarrollo profesional</h3>
+🌱 Estoy actualmente aprendiendo: TypeScript, Angular
+
+👨‍💻 Todos mis proyectos en : https://github.com/luishidalgoa
+
+📝 Regularmente actualizo mi portfolio web https://luishidalgoa.github.io/
+
+💬 Pregúntame acerca de: Java, JavaScript, SQL, Angular...
 <br>
 <br>
 
