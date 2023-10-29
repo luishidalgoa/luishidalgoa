@@ -13,7 +13,9 @@ Entre mis proyectos mas relevantes destaco:</p>
 
 <br>
 <h3>Desarrollo profesional</h3>
-🌱 Estoy actualmente aprendiendo: TypeScript, Angular
+🌱 Estoy actualmente aprendiendo: Angular, TypeScript, Tailwind
+
+⚙️ Proyectos en desarrollo: Clon Spotify
 
 👨‍💻 Todos mis proyectos en : https://github.com/luishidalgoa
 
