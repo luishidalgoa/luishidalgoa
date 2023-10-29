@@ -54,6 +54,8 @@ Entre mis proyectos mas relevantes destaco:</p>
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="30" alt="bootstrap logo"  />
   <img width="12" />
+  <img src="https://github.com/luishidalgoa/luishidalgoa/blob/main/Tailwind.svg" height="30" alt="Tailwind logo"  />
+  <img width="12" />
   <img src="https://cdn.simpleicons.org/unity/FFFFFF" height="30" alt="unity logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=aws" height="30" alt="amazonwebservices logo"  />
