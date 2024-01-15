@@ -13,15 +13,19 @@ Entre mis proyectos mas relevantes destaco:</p>
 
 <br>
 <h3>Desarrollo profesional</h3>
-🌱 Estoy actualmente aprendiendo: Angular, TypeScript, Tailwind
+Estoy actualmente aprendiendo... Angular 🔴, TDD (Jest) 🛂, Spring 🌱
 
-⚙️ Proyectos en desarrollo: Clon Spotify
+Mi proyecto principal terminado: https://withardoriginal1.github.io/Templates/index.html
 
-👨‍💻 Todos mis proyectos en : https://github.com/luishidalgoa
+Proyecto Clon Spotify. Sobre Angular, Electron, Spring, PostgreSQL (En Desarrollo)
 
-📝 Regularmente actualizo mi portfolio web https://luishidalgoa.github.io/
+👨‍💻 Todos mis proyectos en: https://github.com/luishidalgoa
 
-💬 Pregúntame acerca de: Java, JavaScript, SQL, Angular...
+📝 Portfolio web (Obsoleto, se renovará) https://luishidalgoa.github.io/
+
+💬 Pregúntame acerca de... Java, JavaScript, SQL
+
+📫 ¿Como puedes contactarme? https://www.linkedin.com/feed/
 <br>
 <br>
 
@@ -65,6 +69,7 @@ Entre mis proyectos mas relevantes destaco:</p>
   <img src="https://skillicons.dev/icons?i=aws" height="30" alt="amazonwebservices logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
+  <img src="https://github.com/luishidalgoa/luishidalgoa/blob/main/jest.svg" height="30" alt="">
           
 </div>
 
