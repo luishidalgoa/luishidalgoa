@@ -1,0 +1,849 @@
+{
+	"info": {
+		"_postman_id": "7669aff2-2597-4fae-970b-1375dcc5d398",
+		"name": "Microservice-Courses-Students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31150730",
+		"_collection_link": "https://galactic-crescent-156854.postman.co/workspace/6e7e21b0-4367-49af-8246-fc3174491d32/collection/31150730-7669aff2-2597-4fae-970b-1375dcc5d398?action=share&source=collection_link&creator=31150730"
+	},
+	"item": [
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "GetStudentsAll",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response has the required fields - id, name, lastName, email, and courseId\", function () {\r",
+											"  const responseData = pm.response.json();\r",
+											"\r",
+											"  pm.expect(responseData).to.be.an('array');\r",
+											"  responseData.forEach(function(student) {\r",
+											"    pm.expect(student).to.have.property('id');\r",
+											"    pm.expect(student).to.have.property('name');\r",
+											"    pm.expect(student).to.have.property('lastName');\r",
+											"    pm.expect(student).to.have.property('email');\r",
+											"    pm.expect(student).to.have.property('courseId');\r",
+											"  });\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Email is in a valid format\", function () {\r",
+											"  const responseData = pm.response.json();\r",
+											"  \r",
+											"  responseData.forEach(function(student) {\r",
+											"    pm.expect(student.email).to.be.a('string').and.to.match(/^.+@.+\\..+$/);\r",
+											"  });\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/student/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student",
+										"all"
+									]
+								},
+								"description": "Devuelve todos los estudiantes de la base de datos"
+							},
+							"response": [
+								{
+									"name": "GetStudentsByAll",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/student/all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"student",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:13:00 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Juan\",\n        \"lastName\": \"Perez\",\n        \"email\": \"jua.perez@example.com\",\n        \"courseId\": 1\n    },\n    {\n        \"id\": 2,\n        \"name\": \"María\",\n        \"lastName\": \"González\",\n        \"email\": \"mar.gon@example.com\",\n        \"courseId\": 2\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Carlos\",\n        \"lastName\": \"López\",\n        \"email\": \"car.lop@example.com\",\n        \"courseId\": 3\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Ana\",\n        \"lastName\": \"Martínez\",\n        \"email\": \"ana.mar@example.com\",\n        \"courseId\": 1\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Pedro\",\n        \"lastName\": \"Sánchez\",\n        \"email\": \"pedro.san@example.com\",\n        \"courseId\": 3\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GetStudentsByCourse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/student/search-by-course/{{idCourse}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student",
+										"search-by-course",
+										"{{idCourse}}"
+									]
+								},
+								"description": "Devuelve los estudiantes pertenecientes al curso indicado"
+							},
+							"response": [
+								{
+									"name": "GetStudentsByCourse",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/student/search-by-course/{{idCourse}}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"student",
+												"search-by-course",
+												"{{idCourse}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:13:53 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"María\",\n        \"lastName\": \"González\",\n        \"email\": \"mar.gon@example.com\",\n        \"courseId\": 2\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GetStudentById",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"  pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is within an acceptable range\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response has the required fields - id, name, lastName, email, and courseId\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"    pm.expect(responseData).to.have.property('id');\r",
+											"    pm.expect(responseData).to.have.property('name');\r",
+											"    pm.expect(responseData).to.have.property('lastName');\r",
+											"    pm.expect(responseData).to.have.property('email');\r",
+											"    pm.expect(responseData).to.have.property('courseId');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Email is in a valid format\", function () {\r",
+											"  const responseData = pm.response.json();\r",
+											"  \r",
+											"  pm.expect(responseData).to.be.an('object');\r",
+											"  pm.expect(responseData.email).to.be.a('string').and.to.match(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/, \"Email is not in a valid format\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"CourseId is a non-negative integer\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(responseData.courseId).to.be.a('number');\r",
+											"    pm.expect(responseData.courseId).to.be.at.least(0);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/student/search/{{student_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student",
+										"search",
+										"{{student_id}}"
+									]
+								},
+								"description": "Devuelve los estudiantes por el id indicado"
+							},
+							"response": [
+								{
+									"name": "GetStudentById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/student/search/{{student_id}}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"student",
+												"search",
+												"{{student_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:14:11 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"Juan\",\n    \"lastName\": \"Perez\",\n    \"email\": \"jua.perez@example.com\",\n    \"courseId\": 1\n}"
+								}
+							]
+						},
+						{
+							"name": "create_student",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 300ms\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(300);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"{{name_student}}\",\r\n    \"lastName\": \"{{lastName_student}}\",\r\n    \"email\": \"{{email_student}}\",\r\n    \"courseId\": {{course_id}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/student/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"student",
+										"create"
+									]
+								},
+								"description": "Guardara un nuevo estudiante"
+							},
+							"response": [
+								{
+									"name": "create_student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"{{name_student}}\",\r\n    \"lastName\": \"{{lastName_student}}\",\r\n    \"email\": \"{{email_student}}\",\r\n    \"courseId\": {{course_id}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/student/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"student",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:14:38 GMT"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Course",
+					"item": [
+						{
+							"name": "GetCourseAll",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"    pm.expect(pm.response.code).to.equal(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response content type is application/json\", function () {\r",
+											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response schema contains required fields - id, name, and teacher\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('array');\r",
+											"    responseData.forEach(function(course) {\r",
+											"        pm.expect(course).to.have.property('id');\r",
+											"        pm.expect(course).to.have.property('name');\r",
+											"        pm.expect(course).to.have.property('teacher');\r",
+											"    });\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/course/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"course",
+										"all"
+									]
+								},
+								"description": "Devuelve todos los cursos de la base de datos"
+							},
+							"response": [
+								{
+									"name": "GetCourseAll",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/course/all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"course",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:16:19 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Matematicas\",\n        \"teacher\": \"Profesor A\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Física\",\n        \"teacher\": \"Profesor B\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Historia\",\n        \"teacher\": \"Profesor C\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Literatura\",\n        \"teacher\": \"Profesor D\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Biología\",\n        \"teacher\": \"Profesor E\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GetCourseById",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"  pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response has the required fields - id, name, and teacher\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"    pm.expect(responseData).to.have.property('id');\r",
+											"    pm.expect(responseData).to.have.property('name');\r",
+											"    pm.expect(responseData).to.have.property('teacher');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Id is a non-negative integer\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"    pm.expect(responseData.id).to.be.a('number').and.to.be.at.least(0);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Name and teacher must be non-empty strings\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"    pm.expect(responseData.name).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Name should not be empty\");\r",
+											"    pm.expect(responseData.teacher).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Teacher should not be empty\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Content-Type header is application/json\", function () {\r",
+											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/course/search/{{course_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"course",
+										"search",
+										"{{course_id}}"
+									]
+								},
+								"description": "Devuelve el curso a partir del id indicado"
+							},
+							"response": [
+								{
+									"name": "GetCourseById Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/course/search/{{course_id}}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"course",
+												"search",
+												"{{course_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:16:40 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"Matematicas\",\n    \"teacher\": \"Profesor A\"\n}"
+								}
+							]
+						},
+						{
+							"name": "GetStudentsByCourse",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Content-Type is application/json\", function () {\r",
+											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response has the required fields - courseName, teacher, and studentDTOList\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"    pm.expect(responseData).to.have.property('courseName');\r",
+											"    pm.expect(responseData).to.have.property('teacher');\r",
+											"    pm.expect(responseData).to.have.property('studentDTOList');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Email in studentDTOList is in a valid format\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    \r",
+											"    pm.expect(responseData.studentDTOList).to.be.an('array');\r",
+											"    responseData.studentDTOList.forEach(student => {\r",
+											"        pm.expect(student.email).to.be.a('string').and.to.match(/^.+@.+\\..+$/, \"Email should be in a valid format\");\r",
+											"    });\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/course/search-student/{{idCourse}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"course",
+										"search-student",
+										"{{idCourse}}"
+									]
+								},
+								"description": "Devuelve los estudiantes del curso indicado"
+							},
+							"response": [
+								{
+									"name": "GetStudentsByCourse",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/api/course/search-student/{{idCourse}}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"course",
+												"search-student",
+												"{{idCourse}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:16:56 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"courseName\": \"Física\",\n    \"teacher\": \"Profesor B\",\n    \"studentDTOList\": [\n        {\n            \"name\": \"María\",\n            \"lastName\": \"González\",\n            \"email\": \"mar.gon@example.com\",\n            \"courseId\": 2\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "create_course",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 300ms\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(300);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											"pm.test(\"Validate the XML schema of the response\", function () {\r",
+											"  const xmlResponse = xml2Json(pm.response.text());\r",
+											"  \r",
+											"  // Add XML schema validation checks here\r",
+											"  // This test will only validate the XML schema\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"{{name_course}}\",\r\n    \"teacher\": \"{{techer_course}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/course/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"course",
+										"create"
+									]
+								},
+								"description": "Crea un nuevo curso"
+							},
+							"response": [
+								{
+									"name": "create_course",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"{{name_course}}\",\r\n    \"teacher\": \"{{techer_course}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/course/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"course",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Oct 2024 20:17:15 GMT"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			],
+			"description": "Aqui encontraras todas las consultas disponibles a traves del gateway"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
