@@ -67,16 +67,7 @@ Desarrollador **Full Stack** apasionado por la tecnología, con experiencia en *
 ### 📊 Estadísticas de GitHub
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=luishidalgoa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" alt="stats graph" />
-  <img src="https://streak-stats.demolab.com?user=luishidalgoa&locale=en&mode=daily&theme=tokyonight&hide_border=true&border_radius=5" height="165" alt="streak graph" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=luishidalgoa&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=6&theme=tokyonight&hide_border=true" height="150" alt="languages graph" />
-</div>
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=luishidalgoa&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7" alt="trophies" />
+  <img src="https://streak-stats.demolab.com?user=luishidalgoa&locale=en&mode=daily&theme=tokyonight&hide_border=true&border_radius=5" height="180" alt="streak graph" />
 </div>
 
 ---
