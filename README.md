@@ -16,7 +16,7 @@ I work across the stack, mostly Java and TypeScript, with Flutter on mobile. Rig
 
 Alongside the product code I run the infrastructure it sits on. Authentication, WebSocket sync, GitHub Actions pipelines, and Docker deploys to a Raspberry Pi I maintain at home.
 
-🔭 Building Kromia &nbsp;·&nbsp; 🤖 Writing MCP servers for AI agents &nbsp;·&nbsp; 📍 Córdoba, Spain, open to remote
+🔭 Building Kromia &nbsp;·&nbsp; 📚 Studying for the TAI exam, Spain's national IT civil-service track &nbsp;·&nbsp; 📍 Córdoba, Spain, open to remote
 
 ---
 
@@ -163,7 +163,6 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 | [**Ritmo**](https://github.com/luishidalgoa/Ritmo) | .NET desktop app with a built-in MCP server and automated releases | `C#` · `.NET` · `MCP` |
 | [**shrink-studio**](https://github.com/luishidalgoa/shrink-studio) | HEVC video compressor: PowerShell engine, GUI and installer | `C#/WPF` · `PowerShell` · `Inno Setup` |
 | [**yt-subs**](https://github.com/luishidalgoa/Subscription-Artists-And-Automatic-download-music) | Channel subscriptions and automatic downloads, deployed to the Pi through GHCR and Watchtower | `Python` · `Docker` · `Actions` |
-| [**Spring Microservices**](https://github.com/luishidalgoa/SpringBootMicroservice) | Gateway, Eureka, Config Server and services wired with OpenFeign | `Spring Cloud` · `Docker` |
 | [**Project Management System**](https://github.com/luishidalgoa/Project_Management_System) | Collaborative project manager, built with Atmira | `Angular` · `Spring Boot` · `JWT` |
 
 ---
@@ -172,6 +171,7 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 
 **Education**
 
+- 📚 **Preparing the TAI exam** (Técnico Auxiliar de Informática, Spain's national IT civil-service exam) — a CS-degree-breadth syllabus: computer architecture, operating systems, networking, databases, security and public-sector IT law. I built the interactive study engine I use for it: [apuntes-sdk](https://github.com/luishidalgoa/apuntes-sdk).
 - **Higher Vocational Diploma in Multiplatform Application Development** (CFGS DAM) · IES Francisco de los Ríos, 2022–2024
 - **Higher Vocational Diploma in Web Application Development** (CFGS DAW) · IES Francisco de los Ríos, 2024–2025
 - **Vocational Diploma in Computer Systems and Networks** (CFGM SMR)
@@ -182,8 +182,7 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 - 🌐 **Programming for IoT and Smart City Solutions in 5G Environments** · 150 h, official certificate, Junta de Andalucía / Vodafone 5G Plus · 2026
 - 🟣 **Apache Kafka** · Academia DavinchiCoder · 2025
 - 🔐 [**Spring Security 6: Zero to Master with JWT and OAuth2**](https://ude.my/UC-80427d30-2e7d-4645-82cd-23d567618789) · Udemy, Eazy Bytes · 2024
-- 🅰️ [**Angular: De cero a experto**](https://www.udemy.com/certificate/UC-b8661571-511d-4c4e-8b9e-eb7d5e52b964/) · Udemy
-- 🌐 [**JavaScript, HTML5 y CSS3**](https://www.udemy.com/certificate/UC-90b6fd6c-5e30-49a3-9dc1-7b7fadc86d89/) · Udemy
+- 🅰️ [**Angular: De cero a experto**](https://www.udemy.com/certificate/UC-b8661571-511d-4c4e-8b9e-eb7d5e52b964/) and [**JavaScript, HTML5 y CSS3**](https://www.udemy.com/certificate/UC-90b6fd6c-5e30-49a3-9dc1-7b7fadc86d89/) · Udemy
 
 ---
 
