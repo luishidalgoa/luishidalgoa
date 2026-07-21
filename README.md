@@ -9,8 +9,8 @@
   <em>Desarrollador Full Stack Junior · Angular & Spring Boot</em>
 </p>
 
-<a href="https://luishidalgoa.vercel.app/">
-  <img src="https://img.shields.io/badge/Portfolio-luishidalgoa.vercel.app-7AA2F7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+<a href="https://portfolio.hdglabs.com/">
+  <img src="https://img.shields.io/badge/Portfolio-portfolio.hdglabs.com-7AA2F7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
 </a>
 <a href="https://www.linkedin.com/in/luis-hidalgo-aguilar-576463231/">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -32,7 +32,7 @@ Desarrollador **Full Stack** apasionado por la tecnología, con experiencia en *
 - 🔭 Construyendo proyectos Full Stack con Angular + Spring Boot
 - 🌱 Aprendiendo cada día sobre arquitecturas, DevOps y buenas prácticas
 - 💬 Pregúntame sobre **Angular**, **Spring Boot**, **Docker** o **MySQL**
-- 🌐 Más sobre mí en mi **[portafolio web](https://luishidalgoa.vercel.app/)**
+- 🌐 Más sobre mí en mi **[portafolio web](https://portfolio.hdglabs.com/)**
 
 ---
 
@@ -76,9 +76,9 @@ Desarrollador **Full Stack** apasionado por la tecnología, con experiencia en *
 
 | Proyecto | Descripción | Stack |
 |----------|-------------|-------|
-| **[Project Management Tool](https://luishidalgoa.vercel.app/articles/Project-Management-Tool)** | Aplicación de gestión de proyectos enfocada en una experiencia intuitiva y colaborativa. | `Angular` · `Spring Boot` · `Spring Security` · `MySQL` |
-| **[Spotify Clone](https://luishidalgoa.vercel.app/articles/Spotify-Clon)** | Clon de Spotify replicando funcionalidades clave, optimizado para una UX fluida. | `Angular` |
-| **[Spring Microservices](https://luishidalgoa.vercel.app/articles/Spring-Microservices)** | Aplicación orientada a microservicios con documentación centralizada en Swagger. | `Spring Boot` · `Docker` · `Swagger` |
+| **[Project Management Tool](https://portfolio.hdglabs.com/articles/Project-Management-Tool)** | Aplicación de gestión de proyectos enfocada en una experiencia intuitiva y colaborativa. | `Angular` · `Spring Boot` · `Spring Security` · `MySQL` |
+| **[Spotify Clone](https://portfolio.hdglabs.com/articles/Spotify-Clon)** | Clon de Spotify replicando funcionalidades clave, optimizado para una UX fluida. | `Angular` |
+| **[Spring Microservices](https://portfolio.hdglabs.com/articles/Spring-Microservices)** | Aplicación orientada a microservicios con documentación centralizada en Swagger. | `Spring Boot` · `Docker` · `Swagger` |
 
 ---
 
@@ -101,11 +101,11 @@ Desarrollador **Full Stack** apasionado por la tecnología, con experiencia en *
   <a href="https://www.instagram.com/luishidalgo.esp/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo" />
   </a>
-  <a href="https://luishidalgoa.vercel.app/" target="_blank">
+  <a href="https://portfolio.hdglabs.com/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Portfolio&logo=vercel&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="portfolio logo" />
   </a>
 </div>
 
 <div align="center">
-  <sub>⭐️ Gracias por pasarte por mi perfil — ¡échale un ojo a mi <a href="https://luishidalgoa.vercel.app/">portafolio</a>!</sub>
+  <sub>⭐️ Gracias por pasarte por mi perfil — ¡échale un ojo a mi <a href="https://portfolio.hdglabs.com/">portafolio</a>!</sub>
 </div>
