@@ -6,17 +6,17 @@
 <a href="https://portfolio.hdglabs.com/"><img src="https://img.shields.io/badge/Portfolio-7AA2F7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
 <a href="https://www.linkedin.com/in/luis-hidalgo-aguilar-576463231/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="mailto:luishidalgoa@outlook.es"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email" /></a>
-<img src="https://komarev.com/ghpvc/?username=luishidalgoa&label=Profile+views&color=7AA2F7&style=flat" alt="Profile views" />
+
+<img src="https://img.shields.io/badge/%F0%9F%93%8D%20C%C3%B3rdoba%2C%20Spain-open%20to%20remote-3b4261?style=flat-square" alt="Córdoba, Spain · open to remote" />
+<img src="https://komarev.com/ghpvc/?username=luishidalgoa&label=Profile+views&color=7AA2F7&style=flat-square" alt="Profile views" />
 
 </div>
 
 ---
 
-I work across the stack, mostly Java and TypeScript, with Flutter on mobile. Right now I'm building **Kromia**: an SDK that owns a shared contract, plus the web studio, REST API and mobile app that consume it.
+I work across the stack, mostly Java and TypeScript, with Flutter on mobile. My current project is **Kromia**: an SDK that owns a shared contract, plus the web studio, REST API and mobile app that consume it.
 
-Alongside the product code I run the infrastructure it sits on. Authentication, WebSocket sync, GitHub Actions pipelines, and Docker deploys to a Raspberry Pi I maintain at home.
-
-🔭 Building Kromia &nbsp;·&nbsp; 📚 Studying for the TAI exam, Spain's national IT civil-service track &nbsp;·&nbsp; 📍 Córdoba, Spain, open to remote
+I also run the infrastructure my projects sit on: authentication, WebSocket sync, GitHub Actions pipelines, and Docker deploys to a Raspberry Pi I maintain at home. Off-hours I'm preparing the **TAI exam**, Spain's national IT civil-service track.
 
 ---
 
@@ -118,10 +118,6 @@ The Pi never compiles. CI pushes the image to GHCR, **Watchtower** notices the n
 
 GameHub exposes `GET /api/metrics` in Prometheus text format, which I wrote by hand rather than pulling in a client library. It publishes traffic, average latency, unique and active visitors, downloads and bytes served. `node_exporter` covers host metrics, Loki and Promtail collect the logs, and Grafana reads all three. The endpoint needs a bearer token or a LAN address.
 
-### Business process automation
-
-**Power Automate**, **Power Apps** and **SharePoint** for internal workflows and apps: forms, approval flows and document integration. That work sits outside these public repositories.
-
 ---
 
 ## 🤖 Agentic AI
@@ -164,6 +160,19 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 | [**shrink-studio**](https://github.com/luishidalgoa/shrink-studio) | HEVC video compressor: PowerShell engine, GUI and installer | `C#/WPF` · `PowerShell` · `Inno Setup` |
 | [**yt-subs**](https://github.com/luishidalgoa/Subscription-Artists-And-Automatic-download-music) | Channel subscriptions and automatic downloads, deployed to the Pi through GHCR and Watchtower | `Python` · `Docker` · `Actions` |
 | [**Project Management System**](https://github.com/luishidalgoa/Project_Management_System) | Collaborative project manager, built with Atmira | `Angular` · `Spring Boot` · `JWT` |
+
+---
+
+## 💼 Experience
+
+**Deuser Tech Group** *(A Minsait Business, Indra group)* · Process automation, dual-training placement · Córdoba · 2024–2025<br>
+Built internal workflow automation on the Microsoft Power Platform: Power Automate flows, Power Apps, and integrations with SharePoint and Outlook. Also delivered a [Laravel web project](https://github.com/luishidalgoa/Laravel_Proyecto_FPDual). Finished with a written recommendation from the company.
+
+**Atmira** · Full-stack developer, DAM work placement · 2024<br>
+Team-built a [project management web app](https://github.com/luishidalgoa/Project_Management_System): Angular 17 frontend with a [Spring Boot + JWT backend](https://github.com/luishidalgoa/Project_Management_System_BackEnd) over MySQL.
+
+**Inper** · IT technician, SMR work placement · 2022<br>
+Hardware maintenance and network installations.
 
 ---
 
