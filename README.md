@@ -66,12 +66,26 @@ Alongside the product code I run the infrastructure it sits on. Authentication, 
 
 One SDK owns the contract. The web studio, the API and the mobile app consume it, and CI checks that they stay in sync.
 
-| Repo | Role | Stack |
-|---|---|---|
-| 🔒 **kromia-sdk** | Contract monorepo: TS core, Dart mirror, React renderers, MCP server, docs | `TypeScript` · `Dart` · `pnpm workspaces` |
-| 🔒 **Kromia-Studio** | Visual composition editor | `Next.js 16` · `React 19` · `Tailwind v4` |
-| 🔒 **Kromia_NodeJS** | REST API, real-time, object storage | `Express` · `MongoDB` · `Socket.IO` · `MinIO` |
-| 🔒 **kromia-mobile** | Collector app with 3D rendering and shader-based foil | `Flutter` · `Riverpod` · `GLSL` |
+```mermaid
+flowchart LR
+    subgraph SDK["🔒 kromia-sdk — the contract"]
+        CORE["@kromia/core<br/>TypeScript · source of truth"]
+        DART["kromia_core<br/>Dart mirror"]
+        MCP["@kromia/mcp<br/>tools for AI agents"]
+    end
+    CI{{"drift CI<br/>versions · test corpus · API parity"}}
+    STUDIO["🔒 Kromia Studio<br/>Next.js 16 · React 19"]
+    API["🔒 Kromia API<br/>Express · MongoDB · MinIO"]
+    MOBILE["🔒 kromia-mobile<br/>Flutter · Riverpod · GLSL"]
+
+    CORE -- mirrored to --> DART
+    CI -. guards .-> DART
+    CORE --> STUDIO
+    CORE --> API
+    DART --> MOBILE
+    STUDIO <-- REST --> API
+    MOBILE <-- "REST + WebSocket" --> API
+```
 
 Some of the pipeline work behind it:
 
@@ -126,12 +140,10 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=luishidalgoa&theme=tokyonight" alt="Profile summary" width="98%" />
-
-<br/>
-
-<img height="190" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=luishidalgoa&theme=tokyonight" alt="Most used languages" />
-<img height="190" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=luishidalgoa&theme=tokyonight&utcOffset=2" alt="Commits by hour" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics-dark.svg">
+  <img src="assets/metrics-light.svg" alt="GitHub metrics: stars, public repos, repos with CI, followers and language share" width="98%">
+</picture>
 
 <br/><br/>
 
@@ -139,7 +151,7 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 
 </div>
 
-<sub>ℹ️ Much of my recent work sits in private repositories, so these charts only cover public activity.</sub>
+<sub>ℹ️ I generate the card above with [my own script](scripts/build_metrics.py), refreshed daily by [a workflow in this repo](.github/workflows/metrics.yml). I switched after two third-party widget services shut down. It only counts public activity; much of my recent work sits in private repositories.</sub>
 
 ---
 
