@@ -1,0 +1,59 @@
+# Refresca la tarjeta de métricas del README (assets/metrics-{dark,light}.svg).
+#
+# Por qué así y no con widgets de terceros: las instancias públicas se mueren
+# (github-readme-stats → 503 DEPLOYMENT_PAUSED, github-profile-trophy → 402
+# DEPLOYMENT_DISABLED, streak-stats → timeouts del proxy camo). Aquí la tarjeta
+# la genera scripts/build_metrics.py con el GITHUB_TOKEN por defecto y queda
+# COMMITEADA en el repo: GitHub la sirve como un fichero más y no hay nada
+# externo que pueda caerse.
+#
+# Triggers:
+#   - cron diario (06:20 UTC) → datos frescos cada mañana.
+#   - workflow_dispatch → refresco manual desde la pestaña Actions.
+#   - push a main que toque el generador o este workflow → regeneración
+#     inmediata tras un cambio, sin esperar al cron.
+#
+# El commit lo firma github-actions[bot]; no cuenta como contribución mía.
+
+name: Refresh profile metrics
+
+on:
+  schedule:
+    - cron: '20 6 * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_metrics.py'
+      - '.github/workflows/metrics.yml'
+
+permissions:
+  contents: write   # commit de los SVG regenerados
+
+concurrency:
+  group: metrics-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Generar tarjetas
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/build_metrics.py
+
+      - name: Commit si hay cambios
+        run: |
+          if git diff --quiet -- assets; then
+            echo "Sin cambios en las métricas — no se commitea."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "chore: refrescar tarjeta de métricas [skip ci]"
+          git push
