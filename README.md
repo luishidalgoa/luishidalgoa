@@ -7,7 +7,7 @@
 <a href="https://www.linkedin.com/in/luis-hidalgo-aguilar-576463231/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="mailto:luishidalgoa@outlook.es"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email" /></a>
 
-<img src="https://img.shields.io/badge/📍_Córdoba,_Spain-open_to_remote-3b4261?style=flat-square" alt="Córdoba, Spain · open to remote" />
+<img src="https://img.shields.io/badge/%F0%9F%93%8D%20C%C3%B3rdoba%2C%20Spain-open%20to%20remote-3b4261?style=flat-square" alt="Córdoba, Spain · open to remote" />
 <img src="https://komarev.com/ghpvc/?username=luishidalgoa&label=Profile+views&color=7AA2F7&style=flat-square" alt="Profile views" />
 
 </div>
