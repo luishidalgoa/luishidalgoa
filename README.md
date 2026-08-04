@@ -157,7 +157,7 @@ I write MCP servers so agents call my tools through a fixed schema instead of gu
 |---|---|---|
 | [**GameHub**](https://github.com/luishidalgoa/GameHub) | Self-hosted library with a filesystem scanner, signed downloads, analytics and the Prometheus exporter above | `Next.js` · `Prisma` · `Docker` · `GHCR` |
 | [**Ritmo**](https://github.com/luishidalgoa/Ritmo) | .NET desktop app with a built-in MCP server and automated releases | `C#` · `.NET` · `MCP` |
-| [**shrink-studio**](https://github.com/luishidalgoa/shrink-studio) | HEVC video compressor: PowerShell engine, GUI and installer | `C#/WPF` · `PowerShell` · `Inno Setup` |
+| [**Ondine**](https://github.com/luishidalgoa/ondine) | HEVC video compressor: PowerShell engine, GUI and installer | `C#/WPF` · `PowerShell` · `Inno Setup` |
 | [**yt-subs**](https://github.com/luishidalgoa/Subscription-Artists-And-Automatic-download-music) | Channel subscriptions and automatic downloads, deployed to the Pi through GHCR and Watchtower | `Python` · `Docker` · `Actions` |
 | [**Project Management System**](https://github.com/luishidalgoa/Project_Management_System) | Collaborative project manager, built with Atmira | `Angular` · `Spring Boot` · `JWT` |
 
