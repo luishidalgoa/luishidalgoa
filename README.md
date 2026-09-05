@@ -16,7 +16,7 @@
 
 I work across the stack, mostly Java and TypeScript, with Flutter on mobile. My current project is **Kromia**: an SDK that owns a shared contract, plus the web studio, REST API and mobile app that consume it.
 
-I also run the infrastructure my projects sit on: authentication, WebSocket sync, GitHub Actions pipelines, and Docker deploys to a Raspberry Pi I maintain at home. Off-hours I'm preparing the **TAI exam**, Spain's national IT civil-service track.
+I also run the infrastructure my projects sit on: authentication, WebSocket sync, GitHub Actions pipelines, and Docker deploys to a Raspberry Pi I maintain at home.
 
 ---
 
@@ -180,7 +180,6 @@ Hardware maintenance and network installations.
 
 **Education**
 
-- 📚 **Preparing the TAI exam** (Técnico Auxiliar de Informática, Spain's national IT civil-service exam) — a CS-degree-breadth syllabus: computer architecture, operating systems, networking, databases, security and public-sector IT law. I built the interactive study engine I use for it: [apuntes-sdk](https://github.com/luishidalgoa/apuntes-sdk).
 - **Higher Vocational Diploma in Multiplatform Application Development** (CFGS DAM) · IES Francisco de los Ríos, 2022–2024
 - **Higher Vocational Diploma in Web Application Development** (CFGS DAW) · IES Francisco de los Ríos, 2024–2025
 - **Vocational Diploma in Computer Systems and Networks** (CFGM SMR)
